@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --theme-color: rgba(0, 0, 0, 0.765);
+  --theme-color_2: white;
+  --transition: all 0.2s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--theme-color);
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* -------------------- header -------------------- */
+
+header {
+  margin-bottom: 50px;
+}
+
+.header__inner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 10% 30% 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.header__nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 60px;
+}
+
+li {
+  transition: var(--transition);
+}
+
+li:hover {
+  opacity: 0.5;
+}
+
+address {
+  justify-self: end;
+}
+
+address button {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--theme-color_2);
+  border: 1.5px solid var(--theme-color);
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: left;
+  color: var(--theme-color);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.line {
+  height: 1.5px;
+  background-color: var(--theme-color);
+}
+
+/* -------------------- table -------------------- */
+
+.table {
+  display: grid;
+  justify-content: center;
+  background-color: rgb(243, 243, 243);
+  border: 1.5px solid var(--theme-color);
+  padding: 80px 0;
+}
+
+legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+table,
+table * {
+  width: 500px;
+  border: 1.5px solid var(--theme-color);
+  border-collapse: collapse;
+}
+
+table * {
+  padding: 5px 10px;
+}
+
+th {
+  background-color: var(--theme-color);
+  color: var(--theme-color_2);
+  text-align: left;
+}
+
+td {
+  background-color: var(--theme-color_2);
+}
+
+tfoot td {
+  background-color: var(--theme-color);
+  opacity: 0.8;
+  color: var(--theme-color_2);
+}
